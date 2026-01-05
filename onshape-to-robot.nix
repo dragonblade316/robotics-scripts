@@ -4,16 +4,17 @@
   fetchPypi,
 }:
 python3Packages.buildPythonApplication rec {
-  pname = "onshape-to-robot";
+  pname = "onshape_to_robot";
   version = "1.7.9";
   pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
-    hash = "sha256-Pe229rT0aHwA98s+nTHQMEFKZPo/yw6sot8MivFDvAw=";
+    hash = "sha256-iU8dUr1EPEJAzb5Ko8SlAOlwBV2ie/eNpcV4kDEn/N0=";
   };
 
-  build-system = with python3Packages; [setuptools];
+  build-system = with python3Packages; [setuptools uv-build];
+  # build-system = with python3Packages; [pdm-backend];
 
   dependencies = with python3Packages; [
     numpy
@@ -23,6 +24,7 @@ python3Packages.buildPythonApplication rec {
     numpy-stl
     transforms3d
     python-dotenv
+    pybullet
   ];
 
   meta = {
