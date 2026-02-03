@@ -19,6 +19,7 @@
         in
         {
           onshape-to-robot = pkgs.callPackage ./onshape-to-robot.nix { };
+          rabault-onshape-to-robot = pkgs.callPackage ./rabault-onshape-to-robot.nix { };
           mjcf-urdf-simple-converter = pkgs.callPackage ./mjcf-urdf-simple-converter.nix { };
         }
       );
@@ -32,6 +33,7 @@
             # Use the 'self' reference to access your package
             packages = [
               self.packages.${system}.onshape-to-robot
+              self.packages.${system}.rabault-onshape-to-robot
               self.packages.${system}.mjcf-urdf-simple-converter
               # Add other standard packages as needed
             ];
