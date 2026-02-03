@@ -14,7 +14,7 @@ python3Packages.buildPythonApplication rec {
     owner = "nicolas-rabault";
     repo = "onshape-to-robot";
     rev = "b61d08a4a651c5bd167642ca27d1dbbf5f8f3102";
-    sha256 = "";
+    sha256 = "sha256-wCP8zrtCWqcSdJ1EmEGtgaiuV6gUaJtGyTdNXl5kFkY=";
   };
 
   build-system = with python3Packages; [setuptools uv-build];
