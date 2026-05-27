@@ -5,15 +5,15 @@
 }:
 python3Packages.buildPythonApplication rec {
   pname = "onshape_to_robot";
-  version = "1.8.0";
+  version = "1.8.2";
   pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
-    hash = "sha256-TwQ4Ob5y4qvQUYyLVXBTfYCMu3i3DkwUVBFuWQ0LTB0=";
+    hash = "sha256-wi5cOYWwesSvEF8fOQI14YxoXFwtwZteZQa/qFc51HI=";
   };
 
-  build-system = with python3Packages; [setuptools uv-build];
+  build-system = with python3Packages; [uv-build setuptools];
   # build-system = with python3Packages; [pdm-backend];
 
   dependencies = with python3Packages; [
