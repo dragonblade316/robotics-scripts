@@ -32,6 +32,7 @@
             # Use the 'self' reference to access your package
             packages = [
               self.packages.${system}.onshape-to-robot
+              # self.packages.${system}.rabault-onshape-to-robot
               self.packages.${system}.mjcf-urdf-simple-converter
               # Add other standard packages as needed
             ];
