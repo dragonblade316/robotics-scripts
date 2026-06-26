@@ -18,6 +18,11 @@ python3Packages.buildPythonApplication rec {
   };
 
   build-system = with python3Packages; [setuptools uv-build];
+
+  postPatch = ''
+    substituteInPlace pyproject.toml \
+      --replace-fail '"uv_build>=0.9.9,<0.10.0"' '"uv_build>=0.9.9"'
+  '';
   # build-system = with python3Packages; [pdm-backend];
 
   dependencies = with python3Packages; [
