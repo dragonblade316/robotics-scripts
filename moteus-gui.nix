@@ -2,6 +2,7 @@
   lib,
   python3Packages,
   fetchurl,
+  qt6,
   moteus,
   asyncqt,
 }:
@@ -16,6 +17,10 @@ python3Packages.buildPythonApplication rec {
   };
 
   build-system = with python3Packages; [ setuptools ];
+
+  nativeBuildInputs = [ qt6.wrapQtAppsHook ];
+
+  buildInputs = [ qt6.qtbase ];
 
   dependencies = with python3Packages; [
     asyncqt
