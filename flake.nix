@@ -21,6 +21,7 @@
         in
         {
           onshape-to-robot = pkgs.callPackage ./onshape-to-robot.nix { };
+          rabault-onshape-to-robot = pkgs.callPackage ./rabault-onshape-to-robot.nix { };
           mjcf-urdf-simple-converter = pkgs.callPackage ./mjcf-urdf-simple-converter.nix { };
           asyncqt = pkgs.callPackage ./asyncqt.nix { };
           moteus = pkgs.callPackage ./moteus.nix { };
